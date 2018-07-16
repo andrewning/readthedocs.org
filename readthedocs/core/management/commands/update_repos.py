@@ -57,7 +57,8 @@ class Command(BaseCommand):
         record = options['record']
         force = options['force']
         version = options['version']
-        if args:
+
+        if options:
             for slug in options['slugs']:
                 if version and version != "all":
                     log.info("Updating version %s for %s", version, slug)
